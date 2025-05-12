@@ -1,0 +1,13 @@
+1) Plan kodu:
+Całość zintegrowac ze sobą w ROS2 NAV2 tak żeby stworzyć główny wątek obsługujący SLAM (generowanie mapy) i autonomiczną jazdę (przez NAV2, na podstawie mapy SLAM) i od niego komunikujące się z nim node'y z czujników publikujące swoje pomiary (w praktyce node od lidara oraz BNO085 oraz czujniczków TCRT5000 oraz LoRa, bo do TB6612FNG i MCP raczej już nie trzeba, bo pełnią rolę tylko pośredniczącą.
+
+2) Hierarchia i komunikacja node'ów:
+-Lidar A2M8: Publikowanie danych skanowania w temacie /scan.
+-BNO085: Publikowanie orientacji w temacie /imu/data.
+-TCRT5000: Publikowanie danych o przeszkodach w temacie /obstacle/detection.
+-LoRa: Publikowanie komunikatów w temacie /lora/messages.
+
+3) Nav2 wymaga odpowiedniego odczytu mapy, danych odometrycznych i informacji o przeszkodach. Zamiast danych odometrycznych wykorzystalibyśmy dane z IMU, a mapę mielibyśmy przez LIDAR -> SLAM.
+
+4) SLAM (grid slam [occupied / unoccupied):
+
