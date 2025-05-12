@@ -1,4 +1,3 @@
-````markdown
 # Robotics Projects Repository
 
 Welcome to the **Robotics Projects** repository! This is a centralized collection of various robotic system implementations, ranging from autonomous navigation to manual control. Each project is organized as a submodule under the `codes/` directory.
@@ -41,7 +40,7 @@ Clone the main repository and initialize all submodules:
 git clone git@github.com:Krzysiek-Mistrz/electronics_robotics_designs.git
 cd electronics_robotics_designs
 git submodule update --init --recursive
-````
+```
 
 ## Usage
 
@@ -60,6 +59,3 @@ Contributions are welcome! Please follow these steps:
 ## License
 
 GNU GPL V3 @ Krzychu 2025
-
-```
-```
