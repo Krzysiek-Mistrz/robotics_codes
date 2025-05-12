@@ -1,3 +1,6 @@
 [submodule "AOVV"]
 	path = AOVV
 	url = /home/krzychu/Documents/Elektronika/codes/odkurzacz_projekt/AOVV
+[submodule "odkurzacz_projekt/AOVV"]
+	path = odkurzacz_projekt/AOVV
+	url = git@github.com:Krzysiek-Mistrz/AOVV.git
